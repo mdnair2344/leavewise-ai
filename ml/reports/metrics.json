@@ -1,0 +1,114 @@
+{
+  "name": "LeaveWise traffic-volume forecaster",
+  "type": "GradientBoostingRegressor (exported to JS)",
+  "source": "kaggle-metro-interstate-traffic-volume",
+  "is_synthetic": false,
+  "dataset": "Metro Interstate Traffic Volume (UCI #492 / Kaggle mirrors): hourly I-94 westbound, MN, 2012-2018",
+  "rows_used": 40565,
+  "date_from": "2012-10-02 09:00:00",
+  "date_to": "2018-09-30 23:00:00",
+  "trained_at": "2026-11-22 07:47",
+  "sklearn": "1.9.1",
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 5,
+    "learning_rate": 0.06,
+    "subsample": 0.8,
+    "min_samples_leaf": 20,
+    "random_state": 0
+  },
+  "split": "time-based, test = most recent 15%",
+  "metrics": {
+    "seasonal_naive_baseline": {
+      "mae": 231.0,
+      "rmse": 411.7,
+      "r2": 0.9567
+    },
+    "random_forest": {
+      "mae": 224.9,
+      "rmse": 375.9,
+      "r2": 0.9639
+    },
+    "gradient_boosting": {
+      "mae": 221.4,
+      "rmse": 369.3,
+      "r2": 0.9652
+    },
+    "interval_80_coverage_on_test": 0.749
+  },
+  "capacity": 6557,
+  "features": [
+    "hour",
+    "dow",
+    "month",
+    "is_holiday",
+    "temp_c",
+    "rain_mm",
+    "snow_mm",
+    "clouds",
+    "w_clouds",
+    "w_rain",
+    "w_snow",
+    "w_fog"
+  ],
+  "groups": {
+    "time_of_day": [
+      0
+    ],
+    "day_of_week": [
+      1
+    ],
+    "season": [
+      2,
+      4
+    ],
+    "weather": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "holiday": [
+      3
+    ]
+  },
+  "uncertainty": [
+    {
+      "max": 1500,
+      "lo": 0.771,
+      "hi": 1.164
+    },
+    {
+      "max": 3500,
+      "lo": 0.833,
+      "hi": 1.146
+    },
+    {
+      "max": 5000,
+      "lo": 0.911,
+      "hi": 1.088
+    },
+    {
+      "max": 1000000000.0,
+      "lo": 0.935,
+      "hi": 1.064
+    }
+  ],
+  "importances": {
+    "hour": 0.8637,
+    "dow": 0.1092,
+    "month": 0.0048,
+    "is_holiday": 0.0137,
+    "temp_c": 0.0058,
+    "rain_mm": 0.0006,
+    "snow_mm": 0.0001,
+    "clouds": 0.0009,
+    "w_clouds": 0.0002,
+    "w_rain": 0.0001,
+    "w_snow": 0.0008,
+    "w_fog": 0.0001
+  }
+}

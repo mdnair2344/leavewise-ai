@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vercel/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+# ML: raw datasets are large / licensed - download them yourself (see README). Reports + model.generated.js ARE committed.
+ml/data/*
+!ml/data/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+venv/

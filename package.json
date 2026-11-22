@@ -1,0 +1,27 @@
+{
+  "name": "leavewise-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LeaveWise AI - an AI commute and event-traffic copilot (React + Vercel serverless + ML forecaster + LLM)",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "api": "node scripts/dev-api.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "demo-data": "python ml/make_demo_data.py",
+    "train": "python ml/train.py",
+    "train:demo": "python ml/train.py --csv ml/data/synthetic_demo_traffic.csv"
+  },
+  "dependencies": {
+    "mongodb": "^6.10.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.12"
+  }
+}
