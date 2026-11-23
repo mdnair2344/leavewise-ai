@@ -56,7 +56,7 @@ export default function App() {
     <div className="shell">
       <aside className="side" aria-label="Primary">
         <a className="brand" href="#plan" aria-label="LeaveWise home">
-          <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--brand)" /><path d="M14 40h10l6-18 8 26 6-14h6" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="var(--brand)" /><path d="M14 40h10l6-18 8 26 6-14h6" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /></svg>
           <span>LeaveWise</span>
         </a>
         <nav aria-label="Sections">
@@ -99,7 +99,7 @@ export default function App() {
       <div className="content">
         <header className="topbar">
           <a className="brand mobile-only" href="#plan" aria-label="LeaveWise home">
-            <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="var(--brand)" /><path d="M14 40h10l6-18 8 26 6-14h6" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="var(--brand)" /><path d="M14 40h10l6-18 8 26 6-14h6" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </a>
           <div className="crumbs">
             <h1>{page[0]}</h1>
